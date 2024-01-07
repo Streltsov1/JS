@@ -1,0 +1,13 @@
+body{
+    margin: auto;
+    width: 80%;
+}
+.color-block {
+    width: 60px;
+    height: 30px;
+    margin: 10px;
+    display: inline-block;
+}
+button{
+    width: 100%;
+}
