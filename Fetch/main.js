@@ -1,6 +1,6 @@
 function getUserInfo() {
-    var username = document.getElementById("username").value;
-    var userInfoElement = document.getElementById("userInfo");
+    let username = document.getElementById("username").value;
+    let userInfoElement = document.getElementById("userInfo");
     userInfoElement.innerHTML = "";
     fetch(`https://api.github.com/users/${username}`)
       .then(response => response.json())
