@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car catalogs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Car catalogs</h1>
+
+    <h2>Add new car to the list</h2>
+    <form name="creationForm">
+        <div class="mt">
+            <label>
+                <span>Car Brand:</span>
+                <input name="brand" type="text">
+            </label>
+            <label>
+                <span>Model:</span>
+                <input name="model" type="text">
+            </label>
+            <label>
+                <span>License plates:</span>
+                <input name="licensePlates" type="text">
+            </label>
+            <label>
+                <span>Price:</span>
+                <input name="price" type="number">
+            </label>
+        </div>
+        <div class="mt">
+            <button type="reset">Cancel</button>
+            <button id="submit-btn" type="submit">Add</button>
+        </div>
+    </form>
+
+    <h2>Product Catalog</h2>
+    <div>
+        <button id="clear-btn">Clear</button>
+    </div>
+    <form name="findForm">
+        <div class="mt">
+            <label>
+                <span>Search in table</span>
+                <input type="text" id="search" name="search" oninput="filterObjects()" placeholder="Enter name"><br>
+            </label>
+        </div>
+    </form>
+    <table id="product-table" class="mt">
+        <thead>
+            <tr>
+                <th>Car Brand</th>
+                <th>Model</th>
+                <th>License plates</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Audi</td>
+                <td>A4</td>
+                <td>ВК4254ВС</td>
+                <td>7254</td>
+            </tr>
+            <tr>
+                <td>BMW</td>
+                <td>X5</td>
+                <td>ВК6547ВС</td>
+                <td>7254</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
