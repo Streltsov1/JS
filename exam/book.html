@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>LIBRARY</h1>
+    <nav>
+        <a href="" class="selected">Books</a>
+        <a href="visitors.html">Visitors</a>
+        <a href="cards.html">Cards</a>
+        <a href="statistics.html">Statistics</a>
+    </nav>
+    <div class="flex">
+        <h2>ALL BOOKS:</h2>
+        <button onclick="openAddBookModal()" class="add-button">Add book</button>
+    </div>
+    <hr>
+    <div>
+        <form id="searchForm" class="flex">
+            <div>
+                <select id="sortSelect" name="sort">
+                    <option value="title">By name</option>
+                    <option value="author">By author</option>
+                    <option value="copies">By number of copies</option>
+                </select>
+                <button type="button" onclick="sortBooks()">Sort</button>
+            </div>
+            <div>
+                <label for="searchInput">Search:</label>
+                <input type="text" id="searchInput" name="search">
+                <button type="button" onclick="searchBooks()">Search</button>
+            </div>
+        </form>
+        <table id="booksTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Year of publication</th>
+                    <th>Publishers</th>
+                    <th>Pages</th>
+                    <th>Copies</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="addBookModal" class="modal">
+        <h3>Add new book</h3>
+        <form onsubmit="addBook(event)">
+            <div>
+                <label for="titleInput">Title:</label>
+                <input type="text" id="titleInput" required>
+            </div>
+            <div>
+                <label for="authorInput">Author:</label>
+                <input type="text" id="authorInput" required>
+            </div>
+            <div>
+                <label for="yearInput">Year of publication:</label>
+                <input type="number" id="yearInput" required min="0">
+            </div>
+            <div>
+                <label for="publisherInput">Publishers:</label>
+                <input type="text" id="publisherInput" required>
+            </div>
+            <div>
+                <label for="pagesInput">Pages:</label>
+                <input type="number" id="pagesInput" required min="0">
+            </div>
+            <div>
+                <label for="copiesInput">Copies:</label>
+                <input type="number" id="copiesInput" required min="0">
+            </div>
+            <button type="submit">Add book</button>
+        </form>
+        <button onclick="closeAddBookModal()">Close</button>
+    </div>
+    <script src="./book.js"></script> 
+</body>
+</html>
